@@ -1,0 +1,5 @@
+index=soc_ssh_lab "Failed password"
+| rex field=_raw "from\s+(?<src_ip>\S+)\s+port"
+| bin _time span=5m
+| stats count by _time, src_ip
+| where count >= 10
