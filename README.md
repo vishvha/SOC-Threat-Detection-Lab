@@ -28,7 +28,7 @@ I analysed the publicly available `OpenSSH_2k.log` sample using Splunk Enterpris
 | IP/time-window matches returned by the rule | **10** |
 | Dashboard panels built | **4** |
 
-**[Explore Phase 1: SSH Brute-Force Detection](Phase_1_SSH_Bruteforce/README.md)**
+**[[Explore Phase 1: SSH Brute-Force Detection](Phase_%201_SSH_Bruteforce/README.md)**
 
 ### What I built
 
