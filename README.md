@@ -11,7 +11,7 @@ This repository documents a practical, three-phase Security Operations Center (S
 | Phase | Focus | Status |
 | --- | --- | --- |
 | **Phase 1 — SSH Brute-Force Detection** | OpenSSH log ingestion, SPL analysis, threshold-based detection, scheduled alert testing, four-panel dashboard, incident investigation | **Technical work completed; publishing evidence** |
-| **Phase 2 — Windows & Linux Security Log Investigation** | Authentication and security-event investigation across Windows/Linux and relevant endpoint logs | Planned |
+| **Phase 2 — Windows & Linux Security Log Investigation** | Windows Security Events, Sysmon, Linux SSH investigations, password-spraying detection, and five-panel Splunk dashboard | **Completed — November 2026** |
 | **Phase 3 — SOC Detection, Alerts & Incident Response** | Expanded detections, alert triage, incident response, and reporting | Planned |
 
 ## Phase 1 at a glance
@@ -38,6 +38,12 @@ I analysed the publicly available `OpenSSH_2k.log` sample using Splunk Enterpris
 - A four-panel **SSH Security Monitoring Dashboard**: failure timeline, Top 10 source IPs, total failures, and detection-results table.
 - An incident investigation examining repeated `root` attempts, invalid-user messages, successful SSH authentication elsewhere in the dataset, and detection limitations.
 
+## Phase 2 — Windows & Linux Security Log Investigations
+
+Completed Windows authentication log analysis, Sysmon investigations, Linux SSH analysis, cross-platform password-spraying detection, and a five-panel Splunk SOC dashboard.
+
+[**Explore Phase 2 — Investigations, SPL Queries & Dashboard**](https://github.com/vishvha/SOC-Threat-Detection-Lab/tree/main/Phase_2_Windows_Linux_Investigations)
+
 ## Technology and skills
 
 | Tools/data | Skills demonstrated |
@@ -51,12 +57,17 @@ I analysed the publicly available `OpenSSH_2k.log` sample using Splunk Enterpris
 
 ```text
 SOC-Threat-Detection-Lab/
-├── README.md                         # You are here
-└── Phase_1_SSH_Bruteforce/
-    └── README.md                     # Detailed Phase 1 write-up
+├── README.md
+├── Phase_1_SSH_Bruteforce/
+│   └── README.md
+└── Phase_2_Windows_Linux_Investigations/
+    ├── README.md
+    ├── queries/
+    │   └── cross_platform_password_spray.spl
+    └── SOC_Authentication_Security_Monitoring_Dashboard.pdf
 ```
 
-*Supporting SPL files, a redacted screenshot set and the investigation report can be added to the Phase 1 folder as separate evidence artefacts. Phase 2 and Phase 3 folders will be added when that work is underway.*
+*Phase 1 documentation may be expanded with additional SPL queries, screenshots, and investigation evidence. Phase 2 includes its completed README, cross-platform password-spraying detection SPL, and Splunk dashboard PDF. Phase 3 is planned.*
 
 ## Scope and evidence standards
 
